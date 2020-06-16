@@ -1,0 +1,75 @@
+/*Añadimos un color y fuente general al documento*/
+body {
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 25px;
+	background-color: #EEEEEE;
+	margin: 0px;
+	overflow: auto;
+}
+
+/*Añadimos el estilo del menú*/
+.menu {
+	overflow: hidden;
+	background-color: #222;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.menu a {
+	float: left;
+	color: #EEE;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.menu a:hover {
+	background-color: #A1C5D1;
+	color: #222;
+}
+
+.menu a.active {
+	background-color: #11D666;
+	color: #222;
+}
+
+/*Se añaden detalles al pie de página*/
+
+.pie {
+	overflow: hidden;
+	background-color: #444;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.pie p.izda {
+	position: absolute;
+	color: #EEE;
+	text-align: left;
+	text-decoration: none;
+	font-size: 15px;
+	bottom: 0;
+	padding-left: 160px;	
+}
+
+.pie p.drcha {
+	color: #EEE;
+	text-align: right;
+	text-decoration: none;
+	font-size: 15px;
+	bottom: 0;
+	padding-right: 60px;	
+}
+
+.pie img.bt-img {
+	height: 75px;
+	width: 75px;
+	left: 50px;
+	bottom: 5px;
+	position: absolute;
+}

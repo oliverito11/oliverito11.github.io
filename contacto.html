@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv=”Content-Type” content=”text/html; charset=ISO-8859-1″ />
-		<!---Se pone el título de la página-->
-		<title>Conócenos</title>
-		<!--Icono para la pestaña-->
-		<link type="image/x-icon" rel="icon" href="Imágenes/favicon.ico">
-		<!--Se hace referencia a la hoja de estilos en el otro archivo-->
-		<link rel="stylesheet" type="text/css" href="contacto.css">
-		<link rel="stylesheet" type="text/css" href="app.css">
-	</head>
-	<body>
-		<!--Este será el menú de navegación-->
-		<div class="menu">
-			<a href="index.html">Portada</a>
-			<a href="conocenos.html">Conócenos</a>
-			<a href="menus.html">Menús</a>
-			<a href="carta.html">Carta</a>
-			<a class="active" href="contacto.html">Contacto</a>
-		</div>
-		<center>
-			<div id="fondo1"></div>
-			<div id="fondo2"></div>
-			<div class="contacto">
-				Nos encontramos en:	Castilla y León, Zamora, C/ Balborraz, Nº234 <br>
-				Nuestro correo: natura@hotmail.com<br>
-				Nuestra web: natura.com <br>
-			</div>
-		</center>
-		<div class="formulario">
-			¿Quieres contactar con nosotros? ¡Escríbenos un correo!
-			<center>
-				<div class="enviar">
-					<div class="mail">Tu correo*:</div>				
-					<div class="mail_input"><input type="input" placeholder="Correo" name="correo" size="50"></div>
-					<div class="nom">Nombre y apellidos:</div>
-					<div class="nom_input"><input type="input" placeholder="Nombre y apellidos" name="nombre" size="50"></div>
-					<div class="asun">Asunto:</div>
-					<div class="asun_input"><textarea class="asunto" name="asunto" placeholder="Escribe algo..." style="height:200px" style="width: 200px"></textarea></div>
-					<input type="button" value="Enviar">
-				</div>
-			</center>
-		</div>
-		<div id="bt-img2"></div>
-		<!--Este será el pie de página-->
-		<div class="pie">
-			<div>
-				<img class="bt-img" src="Imágenes/logo.png">
-				<p class="izda">Natura<br><br>natura@hotmail.com</p>
-				<p class="drcha">Página creada por:<br>Oliver Linares Colinas<br>olilinares10@gmail.com</p>
-			</div>
-		</div>
-	</body>
+    <head>
+        <meta charset = "UTF-8" />
+        <title>Provincias de CyL</title>
+    </head>
+    <body>
+        <table style="width: 100%">
+            <tr>
+                <!-- Menú -->
+                <td style="width: 20%">
+                    <ul type="square">
+                        <li><a href="avila/avila.html"><b>Ávila</b></a></li>
+                        <li><a href="burgos/burgos.html"><b>Burgos</b></a></li>
+                        <li><a href="leon/leon.html"><b>León</b></a></li>
+                        <li><a href="palencia/palencia.html"><b>Palencia</b></a></li>
+                        <li><a href="salamanca/salamanca.html"><b>Salamanca</b></a></li>
+                        <li><a href="segovia/segovia.html"><b>Segovia</b></a></li>
+                        <li><a href="soria/soria.html"><b>Soria</b></a></li>
+                        <li><a href="valladolid/valladolid.html"><b>Valladolid</b></a></li>
+                        <li><a href="zamora/zamora.html"><b>Zamora</b></a></li>
+                    </ul>
+                    <ul type="circle">
+                        <li><a href="index.html"><b>INICIO</b></a></li>
+                    </ul>
+                </td>
+
+                <!-- Contenido -->
+                <td>
+                    <center><h1>Dónde puedes encontrarme</h1></center>
+                    <p><b>Correo electrónico: </b><em><a href="emailto:oliver.lincol@educa.jcyl.es">oliver.lincol@educa.jcyl.es</a></em></p>
+                    <br>
+                    <p>¿Quieres registrarte para nuevas noticias? Hazlo ahora!</p>
+                    <form action="servicio.php" method="GET">
+                        <label for="nombre"><b>Nombre: *</b></label>
+                        <br>
+                        <input type="text" name="nombre" id="nombre" size="30">
+                        <br><br>
+                        <label for="apellidos">Apellidos: </label>
+                        <br>
+                        <input type="text" name="apellidos" id="apellidos" size="30">
+                        <br><br>
+                        <label for="edad"><b>Edad: *</b></label>
+                        <br>
+                        <input type="text" name="edad" id="edad" size="5">
+                        <br><br>
+                        <label for="correo"><b>Correo electrónico: *</b></label>
+                        <br>
+                        <input type="text" name="correo" id="correo" size="30">
+                        <br><br>
+                        <label for="passwd"><b>Contraseña: *</b></label>
+                        <br>
+                        <input type="password" name="passwd" id="passwd" size="30">
+                        <br><br>
+                        <label for="sexo">Sexo:</label>
+                        <br>
+                        <input type="radio" name="sexo" id="sexo" value="h">
+                            <label for="hombre">Hombre</label>
+                        <br>
+                        <input type="radio" name="sexo" id="sexo" value="m">
+                            <label for="mujer">Mujer</label>
+                        <br><br>
+                        <input type="submit" value="Registrarse" name="enviar" id="enviar">
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>

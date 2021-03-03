@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8" />
+        <title>Provincias de CyL</title>
+        <link rel="stylesheet" href="../app.css" />
+    </head>
+    <body>
+        <table style="width: 100%">
+            <tr>
+                <!-- Menú -->
+                <td style="width: 20%" class="menu">
+                    <ul type="square">
+                        <li><a href="avila/avila.html"><b>Ávila</b></a></li>
+                        <li><a href="burgos/burgos.html"><b>Burgos</b></a></li>
+                        <li><a href="leon/leon.html"><b>León</b></a></li>
+                        <li><a href="palencia/palencia.html"><b>Palencia</b></a></li>
+                        <li><a href="salamanca/salamanca.html"><b>Salamanca</b></a></li>
+                        <li><a href="segovia/segovia.html"><b>Segovia</b></a></li>
+                        <li><a href="soria/soria.html"><b>Soria</b></a></li>
+                        <li><a href="valladolid/valladolid.html"><b>Valladolid</b></a></li>
+                        <li><a href="zamora/zamora.html"><b>Zamora</b></a></li>
+                    </ul>
+                    <ul type="circle">
+                        <li><a href="index.html"><b>INICIO</b></a></li>
+                    </ul>
+                </td>
+
+                <!-- Contenido -->
+                <td>
+                    <center><h1>Dónde puedes encontrarme</h1></center>
+                    <p><b>Correo electrónico: </b><em><a href="emailto:oliver.lincol@educa.jcyl.es">oliver.lincol@educa.jcyl.es</a></em></p>
+                    <br>
+                    <p>¿Quieres registrarte para nuevas noticias? Hazlo ahora!</p>
+                    <form action="servicio.php" method="GET">
+                        <label for="nombre"><b>Nombre: *</b></label>
+                        <br>
+                        <input type="text" name="nombre" id="nombre" size="30">
+                        <br><br>
+                        <label for="apellidos">Apellidos: </label>
+                        <br>
+                        <input type="text" name="apellidos" id="apellidos" size="30">
+                        <br><br>
+                        <label for="edad"><b>Edad: *</b></label>
+                        <br>
+                        <input type="text" name="edad" id="edad" size="5">
+                        <br><br>
+                        <label for="correo"><b>Correo electrónico: *</b></label>
+                        <br>
+                        <input type="text" name="correo" id="correo" size="30">
+                        <br><br>
+                        <label for="passwd"><b>Contraseña: *</b></label>
+                        <br>
+                        <input type="password" name="passwd" id="passwd" size="30">
+                        <br><br>
+                        <label for="sexo">Sexo:</label>
+                        <br>
+                        <input type="radio" name="sexo" id="sexo" value="h">
+                            <label for="hombre">Hombre</label>
+                        <br>
+                        <input type="radio" name="sexo" id="sexo" value="m">
+                            <label for="mujer">Mujer</label>
+                        <br><br>
+                        <input type="submit" value="Registrarse" name="enviar" id="enviar">
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

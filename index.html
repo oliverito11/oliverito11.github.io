@@ -1,57 +1,168 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset = "UTF-8" />
-        <title>Turismo en CyL</title>
-    </head>
-    <body>
-        <table style="width: 100%">
-            <tr>
-                <!-- Menú -->
-                <td style="width: 20%">
-                    <ul type="square">
-                        <li><a href="avila/avila.html"><b>Ávila</b></a></li>
-                        <li><a href="burgos/burgos.html"><b>Burgos</b></a></li>
-                        <li><a href="leon/leon.html"><b>León</b></a></li>
-                        <li><a href="palencia/palencia.html"><b>Palencia</b></a></li>
-                        <li><a href="salamanca/salamanca.html"><b>Salamanca</b></a></li>
-                        <li><a href="segovia/segovia.html"><b>Segovia</b></a></li>
-                        <li><a href="soria/soria.html"><b>Soria</b></a></li>
-                        <li><a href="valladolid/valladolid.html"><b>Valladolid</b></a></li>
-                        <li><a href="zamora/zamora.html"><b>Zamora</b></a></li>
-                    </ul>
-                    <ul type="circle">
-                        <li><a href="contacto.html"><b>CONTACTO</b></a></li>
-                    </ul>
-                </td>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>Proyecto Final</title>
 
-                <!-- Contenido -->
-                <td>
-                    <center><h1>Turismo en Castilla y León</h1></center>
-                    <p>Te doy la bienvenida a este sitio web donde podrás encontrar información detallada de cada provincia de la CCAA de Castilla y León.</p>
-                    <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3053350.083077151!2d-6.6693489119170115!3d41.63873113668758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd379a90038093f7%3A0x969e7b06830556a5!2sCastilla%20y%20Le%C3%B3n!5e0!3m2!1ses!2ses!4v1610539600827!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></center>
-                    <p>Para continuar, haga clic en alguno de los enlaces situados en la parte izquierda.</p>
-                </td>
-            </tr>
-            
-            <!-- Enlaces relacionados -->
-            <tr>
-                <td colspan="2">
-                    <h2>Enlaces relacionados</h2>
-                    <p>Aquí te dejo unos enlaces para más información</p>
-                    <ul>
-                        <li><a href="https://www.youtube.com/watch?v=bqoxt2TNAxo" target="_blank_"><b>Un paseo por Castilla y León</b></a></li>
-                    </ul>
-                </td>
-            </tr>
-            
-            <!-- Créditos -->
-            <tr>
-                <td colspan="2">
-                    <p><b>Autor: </b><em>Oliver Linares Colinas</em></p>
-                    <p><b>Fecha: </b><em>18/12/2020</em></p>
-                </td>
-            </tr>
-        </table>
-    </body>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/blog/">
+
+    
+
+<!-- CSS principal de Bootstrap -->
+<link href="bootstrap-5.0.1-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.rtl.css" rel="stylesheet">
+  </head>
+<body>
+  <!-- Header -->
+  <div class="container">
+    <header class="blog-header py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1"></div>
+        <div class="col-4 text-center">
+          <a class="blog-header-logo text-dark" href="#">PROYECTO 1ºDAM</a>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+          <a class="btn btn-sm btn-outline-secondary" href=".\form.html">Seguir blog</a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Contenedor principal -->
+  <main class="container">
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">Novela visual</h1>
+        <p class="lead my-3">Proyecto integrante de todos los módulos de DAM en el que se centrará en la creación de un videojuego del estilo "Novela visual"</p>
+      </div>
+    </div>
+
+    <!-- Presentación de los integrantes del grupo -->
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Desarrollador</strong>
+            <h3 class="mb-0">Oliver Linares Colinas</h3>
+            <div class="mb-1 text-muted">DAM 1</div>
+            <p class="card-text mb-auto">Estudiante de DAM e integrante del proyecto</p>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Desarrollador</strong>
+            <h3 class="mb-0">Daniel Merino García</h3>
+            <div class="mb-1 text-muted">DAM 1</div>
+            <p class="mb-auto">Estudiante de DAM e integrante del proyecto</p>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenedor de los distintos artículos que pueden haber -->
+    <div class="row g-5">
+      <div class="col-md-8">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          2021
+        </h3>
+        
+        <!-- Artículo donde se explica el proyecto -->
+        <article class="blog-post">
+          <h2 class="blog-post-title">Novela visual</h2>
+          <p class="blog-post-meta">Marzo, 2021 por <a href="mailto:oliver.lincol@educa.jcyl.es">Oliver</a></p>
+
+          <p>En este post se explicarán las características del proyecto integrador de todos los módulos del CFGS de DAM en su primer año.</p>
+          <hr>
+
+          <h2>Explicación</h2>
+          <p>Nuestro proyecto se enfocará en un aspecto más enfocado a un videojuego del estilo "Novela Visual". Para ello, se usarán elementos visuales como personajes, fondos, botones estéticos, y otros elementos que den una estética característica.</p>
+          
+          <p><em>(Imagen menú principal)</em></p>
+          
+          <p>El juego se centrará en contar una historia intrigante a través de texto pero con los elementos visuales anteriormente dichos para una lectura más amena.</p>
+          
+          <p><em>(Imagen del juego)</em></p>
+          
+          <!-- Explicación de las características principales del proyecto -->
+          <h3>Características principales</h3>
+          <ul>
+            <li>Historia interesante</li>
+            <li>Capacidad de poder integrar otras historias de manera sencilla</li>
+            <li>Interacción con el usuario mediante decisiones influyentes en la historia</li>
+          </ul>
+
+          <p><em>(Más imágenes del juego o gifs)</em></p>
+        </article>
+      </div>
+
+      <!-- Contenedor lateral -->
+      <div class="col-md-4">
+        <div class="position-sticky" style="top: 2rem;">
+          <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="fst-italic">Sobre nosotros</h4>
+            <p class="mb-0">Somos un par de estudiantes de DAM 1 con ganas de desarrollar nuestra propia aplicación.</p>
+          </div>
+
+          <div class="p-4">
+            <h4 class="fst-italic">Archivos</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="#">Descargar programa (Próximamente)</a></li>
+              <li><a href="#">Manual de usuario</a></li>
+            </ol>
+          </div>
+
+          <div class="p-4">
+            <h4 class="fst-italic">Dónde encontrarnos</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Volver arriba</a>
+      </p>
+    </footer>   
+  </body>
 </html>

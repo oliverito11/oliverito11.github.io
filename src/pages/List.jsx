@@ -17,7 +17,7 @@ function List({ list, page, changePage }) {
 
   useEffect(() => {
     setBlogs(list);
-    fetch("http://weboliver.fly.dev:3000/entries/" + page.toLowerCase() + "/count")
+    fetch("https://weboliver.fly.dev:3000/entries/" + page.toLowerCase() + "/count")
       .then((res) => res.json())
       .then((json) => setPages(Math.floor(json / 10)))
 

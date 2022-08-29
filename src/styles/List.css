@@ -1,0 +1,23 @@
+.listContainer {
+  min-height: 800px;
+}
+
+.btn-green {
+  background-color: #70f15f;
+  border: 1px solid #79b873;
+  border-radius: 5px !important;
+}
+
+.pagesTop {
+  margin-top: 130px;
+}
+
+@media only screen and (max-width: 991px) {
+  .pagesTop {
+    margin-top: 10px !important;
+  }
+}
+
+.pagesBot {
+  margin-bottom: 50px;
+}

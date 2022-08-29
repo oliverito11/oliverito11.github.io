@@ -1,0 +1,76 @@
+.presentation {
+    background-image: url("../images/bg.png");
+    background-size: cover;
+    z-index: 0;
+    background-position-y: -200px;
+}
+
+@media only screen and (max-width: 991px) {
+    .presentation {
+        background-position-y: 0;
+        background-position-x: -100px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .presentation {
+        background-position-x: -200px;
+    }
+}
+
+
+.presentation>div {
+    color: white;
+}
+
+.webPresentation {
+    background-color: rgb(247, 248, 241);
+}
+
+.styledList {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.styledList li {
+    list-style-type: none;
+    padding-top: 5px;
+}
+
+.styledList li:nth-child(1)::before {
+    content: '🙍‍♂️ ';
+}
+
+.styledList li:nth-child(2)::before {
+    content: '📋 ';
+}
+
+.styledList li:nth-child(3)::before {
+    content: '❓ ';
+}
+
+.styledList li>* {
+    color: black;
+    text-decoration: none;
+}
+
+.styledList li>*:hover {
+    font-weight: 700;
+}
+
+.leftSection {
+    background-color: #3f464d;
+    color: white;
+}
+
+.rightSection {
+    background-color: white;
+    color: black;
+}
+
+.projectsList {
+    font-weight: 600;
+}

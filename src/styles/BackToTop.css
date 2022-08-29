@@ -1,0 +1,12 @@
+#backtotop {
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+    background-color: #70f15f;
+    height: 50px;
+    width: 50px;
+}
+
+a {
+    text-decoration: none;
+}

@@ -12,11 +12,11 @@ function App() {
   const [projectsIndex, setProjectsIndex] = useState(0);
 
   useEffect(() => {
-    fetch("https://weboliver.fly.dev:3000/entries/tutorials/" + tutorialsIndex + "/10")
+    fetch("https://weboliver.fly.dev/entries/tutorials/" + tutorialsIndex + "/10")
       .then((res) => res.json())
       .then((json) => setTutorialList(json))
 
-    fetch("https://weboliver.fly.dev:3000/entries/projects/" + projectsIndex + "/10")
+    fetch("https://weboliver.fly.dev/entries/projects/" + projectsIndex + "/10")
       .then((res) => res.json())
       .then((json) => setProjectList(json))
   }, [tutorialsIndex, projectsIndex])

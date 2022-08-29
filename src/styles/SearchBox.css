@@ -1,0 +1,12 @@
+
+p {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.searchBoxContainer {
+  border: 2px solid rgb(46, 46, 46);
+  background-color: rgb(240, 240, 240);
+  border-radius: 3px;
+  max-width: 300px;
+}

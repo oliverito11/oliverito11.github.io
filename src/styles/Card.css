@@ -11,17 +11,21 @@ img {
 }
 
 .cardContainer:hover {
+    cursor: pointer;
     animation: fadeIn .25s;
     -webkit-animation: fadeIn .25s;
     border: 2px solid #6d6d6d;
+    background-color: #e6e6e6;
 }
 
 @keyframes fadeIn {
     0% {
         border: 2px solid #bbbbbb;
+        background-color: white;
     }
     100% {
         border: 2px solid #6d6d6d;
+        background-color: #e6e6e6;
     }
 }
 
@@ -34,4 +38,16 @@ img {
 .header:hover {
     text-decoration: underline;
     color: black;
+}
+
+.cardLink {
+    color: black;
+}
+
+.cardLink:hover {
+    color: black;
+}
+
+.cardLink:hover > div > div > .header {
+    text-decoration: underline;
 }

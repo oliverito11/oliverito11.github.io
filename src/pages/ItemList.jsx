@@ -30,6 +30,11 @@ function ItemList ({list}) {
           <img key={"img" + cont++} srcSet={c} style={{maxWidth: "50%"}}/>
         );
       }
+      else if (c.startsWith("link:")) {
+        result.push(
+          <a href={c.substring(c.indexOf('*'))}>{c.substring(c.indexOf(':'), c.indexOf('*'))}</a>
+        );
+      }
       else {
         result.push(
           <p key={"text" + cont++} >{c}</p>
@@ -53,9 +58,14 @@ function ItemList ({list}) {
             <div className='description'>
               {renderData()}
             </div>
-            <div>
-              <a href={blog.tryit} target="__blank">Try it!</a>
-            </div>
+            {
+              blog.tryit === "" || blog.tryit === null ?
+              null
+              :
+              <div>
+                <a href={blog.tryit} target="__blank">Try it!</a>
+              </div>
+            }
           </div>
         </div>
       </div>

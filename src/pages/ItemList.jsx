@@ -8,11 +8,13 @@ import BackToTop from "../components/BackToTop";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
-function ItemList ({list}) {
+function ItemList({ list }) {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
+    if(list == null)
+      return;
     let bl = list.find((b) => b.id === parseInt(id));
 
     if (bl) {
@@ -27,12 +29,12 @@ function ItemList ({list}) {
     blog.content.forEach(c => {
       if (c.startsWith("data:image")) {
         result.push(
-          <img key={"img" + cont++} srcSet={c} style={{maxWidth: "50%"}}/>
+          <img key={"img" + cont++} srcSet={c} className={"entryImages"} />
         );
       }
       else if (c.startsWith("link:")) {
         result.push(
-          <a href={c.substring(c.indexOf('*'))}>{c.substring(c.indexOf(':'), c.indexOf('*'))}</a>
+          <a key={"a" + cont++} href={c.substring(c.indexOf('*'))}>{c.substring(c.indexOf(':'), c.indexOf('*'))}</a>
         );
       }
       else {
@@ -46,28 +48,25 @@ function ItemList ({list}) {
   return !blog ? null : (
     <>
       <NavBar active="projects" page="Project" />
-      <div className="container-fluid">
-        <div className='row row-cols-1'>
-          <div className='cont p-5'>
-            <div className='headerTitle'>
-              {blog.title}
-            </div>
-            <div className='title'>
-              {blog.subtitle}
-            </div>
-            <div className='description'>
-              {renderData()}
-            </div>
-            {
-              blog.tryit === "" || blog.tryit === null ?
-              null
-              :
-              <div>
-                <a href={blog.tryit} target="__blank">Try it!</a>
-              </div>
-            }
-          </div>
+
+      <div className='cont'>
+        <div className='headerTitle'>
+          {blog.title}
         </div>
+        <div className='title'>
+          {blog.subtitle}
+        </div>
+        <div className='description'>
+          {renderData()}
+        </div>
+        {
+          blog.tryit === "" || blog.tryit === null ?
+            null
+            :
+            <div>
+              <a href={blog.tryit} target="__blank">Try it!</a>
+            </div>
+        }
       </div>
       <Footer />
       <BackToTop />

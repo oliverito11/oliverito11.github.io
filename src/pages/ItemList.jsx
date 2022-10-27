@@ -1,8 +1,8 @@
 import '../styles/ItemList.css'
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 
 import BackToTop from "../components/BackToTop";
 import Footer from "../components/Footer";
@@ -29,7 +29,7 @@ function ItemList({ list }) {
     blog.content.forEach(c => {
       if (c.startsWith("data:image")) {
         result.push(
-          <img key={"img" + cont++} srcSet={c} className={"entryImages"} />
+          <LazyLoadImage key={"img" + cont++} src={c} className={"entryImages"} />
         );
       }
       else if (c.startsWith("link:")) {

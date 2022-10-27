@@ -10,6 +10,8 @@ import foto from '../images/aboutme.jpg';
 import h from '../images/h.png';
 import tuto from '../images/tuto.png';
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 function Home() {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
 
@@ -35,7 +37,7 @@ function Home() {
                 Oliver Linares Colinas
               </div>
               <div className='fs-6 d-flex justify-content-center align-items-center'>
-                Game Developer 🎮
+                Gameplay Developer 🎮
               </div>
             </div>
           </div>
@@ -65,7 +67,7 @@ function Home() {
           isDesktop ?
             <div className='row row-cols-2'>
               <div className='col-5 d-flex justify-content-center align-items-center'>
-                <img src={foto} width='10%' />
+                <LazyLoadImage src={foto} width='10%' />
               </div>
               <div className='col-7'>
                 <div className='text-center fw-bold fs-4 pb-4'>🙍‍♂️ About me</div>
@@ -97,7 +99,7 @@ function Home() {
                 </div>
               </div>
               <div className='d-flex justify-content-center align-items-center'>
-                <img src={foto} width='10%' />
+                <LazyLoadImage src={foto} width='10%' />
               </div>
             </div>
         }
@@ -123,7 +125,7 @@ function Home() {
                 </div>
               </div>
               <div className='col-5 d-flex justify-content-center align-items-center'>
-                <img src={h} width='70%' />
+                <LazyLoadImage src={h} width='70%' />
               </div>
             </div>
             :
@@ -143,7 +145,7 @@ function Home() {
                 </div>
               </div>
               <div className='d-flex justify-content-center align-items-center'>
-                <img src={h} width='70%' />
+                <LazyLoadImage src={h} width='70%' />
               </div>
             </div>
         }
@@ -155,7 +157,7 @@ function Home() {
           isDesktop ?
             <div className='row row-cols-2'>
               <div className='col-5 d-flex justify-content-center align-items-center'>
-                <img src={tuto} width='70%' />
+                <LazyLoadImage src={tuto} width='70%' />
               </div>
               <div className='col-7'>
                 <div className='text-center fw-bold fs-4 pb-4'>❓ Tutorials</div>
@@ -177,7 +179,7 @@ function Home() {
                 </div>
               </div>
               <div className='d-flex justify-content-center align-items-center'>
-                <img src={tuto} width='70%' />
+                <LazyLoadImage src={tuto} width='70%' />
               </div>
             </div>
         }

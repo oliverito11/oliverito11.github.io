@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react"
-
 const NextPage = ({page, pages, changePage, currentPage, setCurrentPage}) => {
   return (
     <div className='container-fluid'>

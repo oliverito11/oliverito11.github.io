@@ -3,7 +3,7 @@ import '../styles/ItemList.css'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-
+import { Link } from 'react-router-dom';
 import BackToTop from "../components/BackToTop";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
@@ -34,7 +34,7 @@ function ItemList({ list }) {
       }
       else if (c.startsWith("link:")) {
         result.push(
-          <a key={"a" + cont++} href={c.substring(c.indexOf('*'))}>{c.substring(c.indexOf(':'), c.indexOf('*'))}</a>
+          <a key={"a" + cont++} href={c.substring(c.indexOf('*') + 1)} target="_blank">{c.substring(c.indexOf(':') + 1, c.indexOf('*'))}</a>
         );
       }
       else {

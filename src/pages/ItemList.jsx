@@ -3,7 +3,6 @@ import '../styles/ItemList.css'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 import BackToTop from "../components/BackToTop";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
@@ -13,7 +12,7 @@ function ItemList({ list }) {
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    if(list == null)
+    if (list == null)
       return;
     let bl = list.find((b) => b.id === parseInt(id));
 
@@ -34,7 +33,12 @@ function ItemList({ list }) {
       }
       else if (c.startsWith("link:")) {
         result.push(
-          <a key={"a" + cont++} href={c.substring(c.indexOf('*') + 1)} target="_blank">{c.substring(c.indexOf(':') + 1, c.indexOf('*'))}</a>
+          <a key={"a" + cont++} href={c.substring(c.indexOf('*') + 1)} target="_blank" rel="noreferrer noopener">{c.substring(c.indexOf(':') + 1, c.indexOf('*'))}</a>
+        );
+      }
+      else if (c.startsWith("youtube:")) {
+        result.push(
+          <iframe className='video' key={"iframe" + cont++} src={c.substring(c.indexOf('*') + 1)} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         );
       }
       else {
@@ -45,30 +49,38 @@ function ItemList({ list }) {
     });
     return result;
   };
-  return !blog ? null : (
+  return (
     <>
       <NavBar active="projects" page="Project" />
 
-      <div className='cont'>
-        <div className='headerTitle'>
-          {blog.title}
-        </div>
-        <div className='title'>
-          {blog.subtitle}
-        </div>
-        <div className='description'>
-          {renderData()}
-        </div>
-        {
-          blog.tryit === "" || blog.tryit === null ?
-            null
-            :
-            <div>
-              <a href={blog.tryit} target="__blank">Try it!</a>
+      {
+        blog != null ?
+          <div className='cont'>
+            <div className='headerTitle'>
+              {blog.title}
             </div>
-        }
-      </div>
-      <Footer />
+            <div className='title'>
+              {blog.subtitle}
+            </div>
+            <div className='description'>
+              {renderData()}
+            </div>
+            {
+              blog.tryit === "" || blog.tryit === null ?
+                null
+                :
+                <div>
+                  <a href={blog.tryit} target="__blank">Try it!</a>
+                </div>
+            }
+          </div>
+          : null
+      }
+      {
+        blog != null ?
+          <Footer />
+          : null
+      }
       <BackToTop />
     </>
   );

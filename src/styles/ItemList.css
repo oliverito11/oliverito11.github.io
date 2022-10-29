@@ -11,6 +11,11 @@
   .entryImages {
     max-width: 100% !important;
   }
+
+  .video {
+    width: 100% !important;
+    height: 50vw !important;
+  }
 }
 
 .headerTitle {
@@ -30,4 +35,9 @@
 
 .entryImages {
   max-width: 50%;
+}
+
+.video {
+  width: 50%;
+  height: 25vw;
 }

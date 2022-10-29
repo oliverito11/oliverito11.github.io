@@ -31,41 +31,48 @@ function List({ list, page, changePage }) {
     setDate2(d2);
   };
 
-  if (blogs == null)
-    return null
-  else
-    return (
-      <>
-        <NavBar active={page} page={page} />
-        <div className='container-fluid'>
-          <div className='row row-cols-12'>
-            <SearchBox valueChanged={valueChanged} />
-            <div className='pagesTop'>
+  return (
+    <>
+      <NavBar active={page} page={page} />
+      <div className='container-fluid'>
+        <div className='row row-cols-12'>
+          <SearchBox valueChanged={valueChanged} />
+          <div className='pagesTop'>
             {
               pages > 0 ?
-                <NextPage pages={pages} page={page} changePage={changePage} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+                <NextPage pages={pages} page={page} changePage={changePage} currentPage={currentPage} setCurrentPage={setCurrentPage} />
                 :
                 null
             }
-            </div>
-            <div className='col-2'></div>
-            <div className='listContainer col-12 col-lg-10 p-5'>
-              <BlogList blogs={blogs} searchStr={searchStr} date1={date1} date2={date2} />
-            </div>
-            <div className='pagesBot'>
-            {
-              pages > 0 ?
-                <NextPage pages={pages} page={page} changePage={changePage} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-                :
-                null
-            }
-            </div>
           </div>
+          <div className='col-2'></div>
+          {
+            blogs != null ?
+              <>
+                <div className='listContainer col-12 col-lg-10 p-5'>
+                  <BlogList blogs={blogs} searchStr={searchStr} date1={date1} date2={date2} />
+                </div>
+                <div className='pagesBot'>
+                  {
+                    pages > 0 ?
+                      <NextPage pages={pages} page={page} changePage={changePage} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+                      :
+                      null
+                  }
+                </div>
+              </>
+              : null
+          }
         </div>
+      </div>
+      {
+        blogs != null ?
         <Footer />
-        <BackToTop />
-      </>
-    );
+        : null
+      }
+      <BackToTop />
+    </>
+  );
 }
 
 export default List;

@@ -14,13 +14,13 @@ function App() {
   useEffect(() => {
     fetch("https://weboliver.fly.dev/entries/projects/" + projectsIndex + "/10")
       .then((res) => res.json())
-      .then((json) => setProjectList(json))
+      .then((json) => setProjectList(json.reverse()))
   }, [projectsIndex])
 
   useEffect(() => {
     fetch("https://weboliver.fly.dev/entries/tutorials/" + tutorialsIndex + "/10")
       .then((res) => res.json())
-      .then((json) => setTutorialList(json))
+      .then((json) => setTutorialList(json.reverse()))
   }, [tutorialsIndex])
 
   function changePage(index, page) {
@@ -41,7 +41,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='tutorials' element={<List list={tutorialList} page={"Tutorials"} changePage={(index, page) => changePage(index, page)} />} />
           <Route path='tutorials/:id' element={<ItemList list={tutorialList} />} />
-          <Route path='projects' element={<List list={projectList} page={"Projects"} />} />
+          <Route path='projects' element={<List list={projectList} page={"Projects"} changePage={(index, page) => changePage(index, page)} />} />
           <Route path='projects/:id' element={<ItemList list={projectList} />} />
           <Route path='*' element={<NotFoundPage />} />
         </Route>

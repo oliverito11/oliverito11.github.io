@@ -33,7 +33,7 @@ function ItemList({ list }) {
       }
       else if (c.startsWith("link:")) {
         result.push(
-          <a key={"a" + cont++} href={c.substring(c.indexOf('*') + 1)} target="_blank" rel="noreferrer noopener">{c.substring(c.indexOf(':') + 1, c.indexOf('*'))}</a>
+          <a key={"a" + cont++} href={c.substring(c.indexOf(':') + 1, c.indexOf('*'))} target="_blank" rel="noreferrer noopener">{c.substring(c.indexOf(':') + 1, c.indexOf('*'))}</a>
         );
       }
       else if (c.startsWith("youtube:")) {

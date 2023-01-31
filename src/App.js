@@ -14,13 +14,13 @@ function App() {
   useEffect(() => {
     fetch("https://weboliver.fly.dev/entries/projects/" + projectsIndex + "/10")
       .then((res) => res.json())
-      .then((json) => setProjectList(json.reverse()))
+      .then((json) => setProjectList(json))
   }, [projectsIndex])
 
   useEffect(() => {
     fetch("https://weboliver.fly.dev/entries/tutorials/" + tutorialsIndex + "/10")
       .then((res) => res.json())
-      .then((json) => setTutorialList(json.reverse()))
+      .then((json) => setTutorialList(json))
   }, [tutorialsIndex])
 
   function changePage(index, page) {

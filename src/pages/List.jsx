@@ -19,7 +19,14 @@ function List({ list, page, changePage }) {
     setBlogs(list);
     fetch("https://weboliver.fly.dev/entries/" + page.toLowerCase() + "/count")
       .then((res) => res.json())
-      .then((json) => setPages(Math.floor(json / 10)))
+      .then((json) => {
+        if(Math.floor(json % 10) === 0) {
+          setPages(Math.floor((json - 1) / 10))
+        }
+        else {
+          setPages(Math.floor(json / 10))
+        }
+      })
 
     window.scrollTo(0, 0)
   }, [list]);

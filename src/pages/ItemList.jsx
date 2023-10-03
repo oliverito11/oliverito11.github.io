@@ -49,6 +49,7 @@ function ItemList({ list }) {
     });
     return result;
   };
+  
   return (
     <>
       <NavBar active="projects" page="Project" />
